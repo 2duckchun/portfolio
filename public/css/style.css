@@ -1,0 +1,29 @@
+@import "./reset.css";
+
+html, body {
+    height: 100%;
+}
+
+.header {
+    background-color: #F1F1F1;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.panel__container {
+    height: 100%;
+}
+
+.panel__container-left {
+    width: 250px;
+    height: 100%;
+    background-color: #F1F1F1;
+}
