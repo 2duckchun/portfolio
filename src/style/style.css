@@ -1,0 +1,190 @@
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.container {
+  width: 850px;
+  margin: auto;
+  border: 1px solid black;
+  overflow: hidden;
+  font-family: "DungGeunMo";
+}
+
+header {
+  width: 100%;
+  height: 310px;
+  position: relative;
+}
+header::before {
+  position: absolute;
+  width: inherit;
+  top: 0;
+  height: 250px;
+  filter: blur(2px);
+  content: "";
+  z-index: -1;
+  transform: scale(1.1);
+  background: url(../img/horse.jpg);
+  background-size: cover;
+}
+header h1 {
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  position: relative;
+  top: 200px;
+  left: 260px;
+  color: white;
+  font-size: 75px;
+}
+header .profile_image {
+  z-index: 2;
+  top: 120px;
+  left: 30px;
+  width: 160px;
+  height: 160px;
+  border: 5px solid white;
+  position: absolute;
+  background: url(../img/profile.jpg);
+  border-radius: 50%;
+  background-size: cover;
+  background-position-y: 70%;
+  background-repeat: none;
+}
+header nav {
+  position: relative;
+  top: 200px;
+}
+header nav ul {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+}
+header nav ul li {
+  font-family: serif, sans-serif, monospace;
+  text-align: center;
+  padding: 0px 30px;
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: bolder;
+  color: aliceblue;
+  letter-spacing: 2px;
+}
+
+.main-catchphrase {
+  margin-top: 50px;
+}
+.main-catchphrase p {
+  font-size: 45px;
+  text-align: center;
+  line-height: 60px;
+}
+.main-catchphrase strong {
+  font-size: 50px;
+  color: tomato;
+  font-weight: bolder;
+}
+
+.main-intro {
+  margin-top: 50px;
+}
+.main-intro li {
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 35px;
+}
+.main-intro li::before {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: black;
+  content: "";
+  margin-right: 10px;
+}
+
+.hr-double {
+  width: 70%;
+  height: 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 35px auto 35px;
+}
+
+.show-git-tistory {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.show-git-tistory img {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.git-tistory-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-around;
+}
+.git-tistory-container .growup-explain {
+  text-align: left;
+  font-size: 25px;
+  font-style: italic;
+  text-decoration: underline;
+}
+.git-tistory-container .growup-explain strong {
+  margin-bottom: 25px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+}
+.git-tistory-container .growup-explain li {
+  font-size: 16px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  line-height: 35px;
+}
+.git-tistory-container .growup-explain li::before {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: black;
+  content: "";
+  margin-left: 50px;
+  margin-right: 10px;
+}
+
+.show-tistory strong {
+  display: block;
+  margin-bottom: 25px;
+}
+.show-tistory p {
+  line-height: 25px;
+}
+
+.container-project {
+  text-align: center;
+}
+.container-project h2 {
+  font-size: 40px;
+}
+.container-project p {
+  padding-bottom: 50px;
+}
+.container-project h3 {
+  line-height: 40px;
+}
+
+.push {
+  height: 1000px;
+}/*# sourceMappingURL=style.css.map */
