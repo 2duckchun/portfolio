@@ -1,0 +1,95 @@
+.sect-catch-itsme {
+    margin-top: 50px;
+    p {
+        font-size: 45px;
+        text-align: center;
+        line-height: 60px;
+    }
+    strong {
+        font-size: 50px;
+        color: tomato;
+        font-weight: bolder;
+    }
+}
+
+.sect-intro-itsme {
+    margin-top: 50px;
+    li {
+        font-size: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 35px;
+    }
+    li::before {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: black;
+        content: "";
+        margin-right: 10px;
+    }
+}
+
+
+
+.sect-mydaily-itsme {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    img {
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+
+.cont-mydaily-explain-itsme {
+    margin: auto;
+    display: block;
+    ul {
+        padding-left: 75px;
+        li {
+            font-size: 16px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            line-height: 35px;
+        }
+        li::before {
+            display: block;
+            width: 10px;
+            height: 10px;
+            background: black;
+            content: "";
+            margin-left: 50px;
+            margin-right: 10px;
+        }
+    }
+}
+
+
+.sect-project-itsme {
+    text-align: center;
+    h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    p {
+        padding-bottom: 50px;
+    }
+    h3 {
+        line-height: 40px;
+    }
+    h3:hover {
+        outline: thick double #32a1ce;
+        cursor: pointer;
+    }
+}
+
+
+.push {
+    height: 1000px;
+}

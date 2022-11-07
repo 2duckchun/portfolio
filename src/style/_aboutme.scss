@@ -1,0 +1,106 @@
+.sect-video-aboutme {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.1);
+    .tag-video-aboutme {
+        display: block;
+        margin: auto;
+        height: 340px;
+        width: 600px;
+    }
+    .div-video-caption {
+        padding: 7px 0px;
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+.sect-intro-aboutme,
+.sect-done-project,
+.sect-contact {
+    margin: auto;
+    width: 70%;
+}
+
+.div-intro-aboutme {
+    padding: 20px 0px 20px 0px;
+    width: 100%;
+    display: flex;
+    h2 {
+        padding: 15px 0px;
+        font-size: 24px;
+    }
+    li {
+        font-size: 16px;
+        padding: 5px 0px;
+        display: flex;
+        align-items: center;
+    }
+    li::before {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: black;
+        border-radius: 50%;
+        content: "";
+        margin-right: 10px;
+    }
+    .pic-intro-formal {
+        flex-basis: 20%;
+        height: 150px;
+        background: url(../img/formal.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .pic-intro-informal {
+        flex-basis: 20%;
+        height: 150px;
+        background: url(../img/informal.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .txt-intro {
+        flex-grow: 1;
+        padding: 0px 20px;
+    }
+}
+
+.div-intro-aboutme:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.sect-done-project {
+    h2 {
+        padding: 15px 0px;
+        font-size: 24px;
+    }
+    li {
+        font-size: 16px;
+        padding: 5px 10px 5px 20px;
+        display: flex;
+        align-items: center;
+    }
+    li::before {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: black;
+        border-radius: 50%;
+        content: "";
+        margin-right: 10px;
+    }
+}
+
+.sect-contact {
+    h2 {
+        padding: 15px 0px;
+        font-size: 24px;
+    }
+    ul {
+        display: flex;
+    }
+    img {
+        margin-right: 20px;
+        height: 40px;
+        width: 40px;
+    }
+}

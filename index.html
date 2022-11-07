@@ -10,65 +10,37 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>2DUCKCHUN</h1>
-            <div class="profile_image">
+        <header class="cont-header">
+            <h1 class="txt-nickname-header">2DUCKCHUN</h1>
+            <div class="img-profile-header">
             </div>
-            <nav>
-                <ul>
-                    <li>MAIN</li>
-                    <li>ABOUT ME</li>
-                    <li>PHOTO</li>
+            <nav class="nav-header">
+                <ul class="ul-header">
+                    <li class="go-itsme">It's ME</li>
+                    <li class="go-aboutme">ABOUT ME</li>
+                    <li class="go-photo">PHOTO(미구현)</li>
                 </ul>
             </nav>
         </header>
-        <main>
-            <section class="main-catchphrase">
-                <p>미래가 촉망되는 개발자</p>
-                <p>지금 가장 값싼 개발자</p>
-                <p><strong>2DC</strong>입니다.</p>
-            </section>
-            <section class="main-intro">
-                <ul>
-                    <li>22년 5월경, 본격적으로 프로그래밍을 시작했습니다.</li>
-                    <li>탄탄한 JS 기초를 바탕으로 폭발적인 성장을 이뤄내고자 합니다.</li>
-                    <li>이를 위해 매일 매일 노력하고 있습니다.</li>
-                </ul>
-            </section>
-            <div class="hr-double"></div>
-            <section class="show-git-tistory">
-                <img src="https://ghchart.rshah.org/2DUCKCHUN" />
-                <div class="git-tistory-container">
-                    <div class="growup-explain">
-                        <strong>Stay hungry stay foolish</strong>
-                        <ul>
-                            <li>성장궤적을 남기기위해 1일 1커밋과 블로그 활동을 합니다.</li>
-                            <li>현재 관심사는 알고리즘 이론 및 바닐라 JS 구현입니다.</li>
-                            <li>JS로 하는 것은 뭐든지 하고 싶습니다.</li>
-                        </ul>
-                    </div>
-                    <div class="show-tistory">
-                        
-                    </div>
-                </div>
-            </section>
-            <div class="hr-double"></div>
-            <section class="container-project">
-                <h2>PROJECT</h2>
-                <p>클릭하면 모달창으로 설명할 수 있게 만들 예정</p>
-                <h3>마개조 밴딩 머신 (기획중) - 페어 프로그래밍</h3>
-                <h3>마켓 마켓 마켓 - 팀 프로젝트</h3>
-                <h3>??? - 개인 프로젝트</h3>
-                <h3>올드스쿨 자바스크립트 (기획중) - 5개년 계획</h3>
-            </section>
 
 
-
-            <div class="push">
-            </div>
+        <main class="cont-main">
         </main>
+
+        <!-- 모달창 -->
+        <section class="cont-modal overlay-modal">
+            <div class="window-modal">
+                <div class="header-modal">
+                    <h2 class="tit-modal"></h2>
+                    <div class="btn-close-modal">X</div>
+                </div>
+                <div class="main-modal">
+                </div>
+            </div>
+        </section>
+
     </div>
-    <script type="module" src="./src/js/index.js">
+    <script type="module" src="./src/js/controller.js">
     </script>
 </body>
 </html>
