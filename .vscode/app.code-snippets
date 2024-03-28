@@ -33,7 +33,7 @@
       "}",
       "",
       "const $1${TM_FILENAME_BASE}: FunctionComponent<$1${TM_FILENAME_BASE}Props> = ({children}) => {",
-      "  return <main>{children}</main>",
+      "  return <><header>HEADER</header>{children}<footer>FOOTER</footer></>",
       "}",
       "",
       "export default $1${TM_FILENAME_BASE}",
