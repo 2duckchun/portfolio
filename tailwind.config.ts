@@ -2,12 +2,7 @@ import type { Config } from 'tailwindcss'
 
 const config = {
   darkMode: ['class'],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
+  content: ['./src/**/*.{ts,tsx}'],
   prefix: '',
   theme: {
     container: {
@@ -18,7 +13,22 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-sans-kr)'],
+        'black-han-sans': ['var(--font-black-han-sans)'],
+      },
       colors: {
+        app: {
+          primary: {
+            '001': '#496989',
+            '002': '#58A399',
+            '003': '#A8CD9F',
+            '004': '#E2F4C5',
+          },
+          accent: {
+            '001': '#FDAF7B',
+          },
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
