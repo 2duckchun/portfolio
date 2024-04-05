@@ -1,4 +1,5 @@
 import { FunctionComponent, PropsWithChildren } from 'react'
+import { Header } from '@/src/layers/widgets'
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -9,7 +10,7 @@ interface layoutProps extends PropsWithChildren {}
 const layout: FunctionComponent<layoutProps> = ({ children }) => {
   return (
     <>
-      <header>HEADER</header>
+      <Header />
       {children}
       <footer>FOOTER</footer>
     </>
