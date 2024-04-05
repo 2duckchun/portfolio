@@ -22,7 +22,7 @@ export const FirstNotebookIntroContainer: FunctionComponent<
   return (
     <Canvas
       className={cn(className)}
-      camera={{ position: [-5, 0, -20], fov: 55 }}
+      camera={{ position: [-5, 0, -20], fov: 45 }}
     >
       <pointLight position={[10, 10, 10]} intensity={1.5} />
       <Suspense fallback={<Html center className="w-full"></Html>}>
