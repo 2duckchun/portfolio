@@ -1,16 +1,6 @@
-import { cn } from '@/src/layers/shared/lib/utils'
 import { FunctionComponent, HTMLAttributes } from 'react'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/src/layers/shared'
 import Image from 'next/image'
-import { Separator } from '@/src/layers/shared'
-import { Alert, AlertDescription, AlertTitle } from '@/src/layers/shared'
-
+import Link from 'next/link'
 import {
   Cake,
   Contact,
@@ -20,8 +10,12 @@ import {
   PanelsTopLeft,
   School,
 } from 'lucide-react'
-import Link from 'next/link'
+import { SiTistory } from 'react-icons/si'
+import { FaGithub } from 'react-icons/fa'
+import { GiArchiveResearch } from 'react-icons/gi'
+import { FaReact } from 'react-icons/fa'
 import { InnerCard } from './inner-card'
+import { Alert, AlertDescription, AlertTitle } from '@/src/layers/shared'
 interface AboutMeContainerProps extends HTMLAttributes<HTMLDivElement> {}
 
 const AboutMeContainer: FunctionComponent<AboutMeContainerProps> = ({
@@ -45,24 +39,54 @@ const IntroduceMySelf = () => {
     <div className="mb-3 text-center text-xl">
       <ul className="m-auto w-fit list-disc text-left ">
         <li>
+          탄탄한 자바스크립트 기초를 바탕으로 로직의 동작원리를 빠르게
+          캐치합니다.
+        </li>
+        <li>
           협업과 유지보수가 쉬운 작업 환경을 구축하는 것에 관심이 많습니다.
           <ul className="list-inside list-disc border-black marker:text-gray-300">
-            <li className="text-lg">
-              <Github className="mr-2 inline-block" />
-              (링크) 모노레포 가이드 작성
+            <li className="text-lg hover:text-black/50">
+              <FaGithub className="mr-2 inline-block" />
+              <Link href="https://github.com/2duckchun/nextjs-monorepo-guide">
+                (링크) 모노레포 가이드 작성
+              </Link>
             </li>
-            <li className="text-lg">
-              <Github className="mr-2 inline-block" />
-              (링크) 아키텍처 이모저모 1, 2
+            <li className="text-lg hover:text-black/50">
+              <SiTistory className="mr-2 inline-block" />
+              <Link href="https://2duckchun.tistory.com/540">
+                (링크) 집합적 사고로 레이아웃 설계하기 등
+              </Link>
+            </li>
+            <li className="text-lg hover:text-black/50">
+              <SiTistory className="mr-2 inline-block" />
+              <Link href="https://2duckchun.tistory.com/516">
+                (링크) 프론트엔드 설계 아이데이션
+              </Link>
             </li>
           </ul>
         </li>
-        <li>지식 공유 및 토의 활동에 관심이 많습니다.</li>
         <li>
-          개발자 전직 이전에 다양한 직군과 의사소통하며 문제를 해결한 경험이
-          있습니다.
+          지식 공유 및 토의 활동에 관심이 많습니다.
+          <ul className="list-inside list-disc border-black marker:text-gray-300">
+            <li className="text-lg hover:text-black/50">
+              <FaReact className="mr-2 inline-block" />
+              <Link href="https://ko.react.dev/reference/react/useEffect">
+                (링크) React 공식문서 useEffect 번역
+              </Link>
+            </li>
+            <li className="text-lg hover:text-black/50">
+              <FaReact className="mr-2 inline-block" />
+              <Link href="https://ko.react.dev/reference/react/useReducer">
+                (링크) React 공식문서 useReducer 번역
+              </Link>
+            </li>
+            <li className="text-lg">
+              <GiArchiveResearch className="mr-2 inline-block" />
+              (현) 한국방송통신대학교 컴퓨터과학과 스터디 운영
+            </li>
+          </ul>
         </li>
-        <li>Next.js를 자유롭게 다룰 수 있습니다.</li>
+        <li>문제해결을 위한 의사소통에 강점이 있습니다.</li>
       </ul>
     </div>
   )
