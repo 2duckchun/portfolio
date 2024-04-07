@@ -7,6 +7,7 @@ export * from './ui/button'
 export * from './ui/card'
 export * from './ui/section'
 export * from './ui/alert'
+export * from './ui/inner-card'
 
 // hooks
 export * from './hooks/use-typing-effect'

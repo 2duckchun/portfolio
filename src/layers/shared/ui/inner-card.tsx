@@ -35,7 +35,7 @@ const InnerCard: FunctionComponent<InnerCardProps> = ({
           {description}
         </CardDescription>
       </CardHeader>
-      <CardContent>{children}</CardContent>
+      <CardContent className="p-2 md:p-6">{children}</CardContent>
     </Card>
   )
 }

@@ -14,7 +14,7 @@ import { SiTistory } from 'react-icons/si'
 import { FaGithub } from 'react-icons/fa'
 import { GiArchiveResearch } from 'react-icons/gi'
 import { FaReact } from 'react-icons/fa'
-import { InnerCard } from './inner-card'
+import { InnerCard } from '@/src/layers/shared'
 import { Alert, AlertDescription, AlertTitle } from '@/src/layers/shared'
 interface AboutMeContainerProps extends HTMLAttributes<HTMLDivElement> {}
 
