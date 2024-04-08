@@ -1,49 +1,67 @@
-import { FunctionComponent, HTMLAttributes, ReactNode } from 'react'
+'use client'
+
+import { FunctionComponent, HTMLAttributes } from 'react'
 import { InnerCard } from '../../shared/ui/inner-card'
 import Image from 'next/image'
-import { Card } from '../../shared'
+import { Button, Card, useSkillModalStore } from '../../shared'
 interface SkillSetContainerProps extends HTMLAttributes<HTMLDivElement> {}
 
-const mockData = [
+type mockData = {
+  imageSrc: string
+  imageAlt: string
+  skillKey: SkillSet
+}[]
+
+const mockData: mockData = [
+  {
+    imageSrc: '/images/skill/html-js-css.png',
+    imageAlt: 'html-js-css',
+    skillKey: 'html-js-css',
+  },
   {
     imageSrc: '/images/skill/nextjs.png',
     imageAlt: '넥스트js',
+    skillKey: 'nextjs',
   },
   {
     imageSrc: '/images/skill/react.png',
     imageAlt: '리액트',
-  },
-  {
-    imageSrc: '/images/skill/html-js-css.png',
-    imageAlt: 'html, js, css',
-  },
-  {
-    imageSrc: '/images/skill/docker.svg',
-    imageAlt: '도커',
-  },
-  {
-    imageSrc: '/images/skill/firebase.svg',
-    imageAlt: '파이어베이스',
-  },
-  {
-    imageSrc: '/images/skill/zustand.png',
-    imageAlt: '주스탠드',
+    skillKey: 'react',
   },
   {
     imageSrc: '/images/skill/tailwind.png',
     imageAlt: '테일윈드',
+    skillKey: 'tailwind',
+  },
+  {
+    imageSrc: '/images/skill/zustand.png',
+    imageAlt: '주스탠드',
+    skillKey: 'zustand',
   },
   {
     imageSrc: '/images/skill/react-query.svg',
-    imageAlt: '리액트쿼리',
+    imageAlt: '리액트 쿼리',
+    skillKey: 'react-query',
   },
   {
-    imageSrc: '/images/skill/sql.png',
-    imageAlt: '리액트쿼리',
+    imageSrc: '/images/skill/nestjs.svg',
+    imageAlt: 'Nextjs',
+    skillKey: 'nestjs',
+  },
+  {
+    imageSrc: '/images/skill/firebase.svg',
+    imageAlt: 'firebase',
+    skillKey: 'firebase',
   },
   {
     imageSrc: '/images/skill/github.svg',
-    imageAlt: '리액트쿼리',
+    imageAlt: 'github',
+    skillKey: 'github',
+  },
+  {
+    imageSrc: '/images/skill/docker.svg',
+    imageAlt: 'docker',
+    skillKey: 'docker',
   },
 ]
 
@@ -54,9 +72,10 @@ const SkillSetContainer: FunctionComponent<SkillSetContainerProps> = ({
   return (
     <InnerCard title="Skills" description="">
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:flex md:flex-wrap md:gap-5">
-        {mockData.map((el, idx) => {
+        {mockData.map((el) => {
           return (
             <SkillSetImageCard
+              type={el.skillKey}
               key={el.imageAlt}
               imageSrc={el.imageSrc}
               imageAlt={el.imageAlt}
@@ -73,25 +92,37 @@ export { SkillSetContainer }
 interface SkillSetImageCardProps {
   imageSrc: string
   imageAlt: string
+  type: SkillSet
   // TODO: 모달기능 추가 예정
 }
 
-const SkillSetImageCard = ({ imageAlt, imageSrc }: SkillSetImageCardProps) => {
+const SkillSetImageCard = ({
+  imageAlt,
+  imageSrc,
+  type,
+}: SkillSetImageCardProps) => {
+  const { open } = useSkillModalStore()
+
   return (
-    <Card className="flex max-h-[100px] max-w-[150px] cursor-pointer items-center justify-center p-2 shadow-md transition hover:scale-125 md:max-h-[200px] md:max-w-[300px] md:p-8">
-      <Image
-        unoptimized
-        alt={imageAlt}
-        src={imageSrc}
-        width={0}
-        height={0}
-        style={{
-          maxWidth: '100px',
-          width: '100%',
-          maxHeight: '100px',
-          height: 'auto',
-        }}
-      />
+    <Card
+      onClick={() => open(type)}
+      className="flex max-h-[100px] max-w-[150px] cursor-pointer items-center justify-center p-2 shadow-md transition hover:scale-125 md:max-h-[200px] md:max-w-[300px] md:p-8"
+    >
+      <Button variant={'tag'}>
+        <Image
+          unoptimized
+          alt={imageAlt}
+          src={imageSrc}
+          width={0}
+          height={0}
+          style={{
+            maxWidth: '100px',
+            width: '100%',
+            maxHeight: '100px',
+            height: 'auto',
+          }}
+        />
+      </Button>
     </Card>
   )
 }
