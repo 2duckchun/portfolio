@@ -27,8 +27,8 @@ const Header: FunctionComponent<headerProps> = ({ className, ...props }) => {
   return (
     <header
       className={cn(
-        'fixed top-0 w-full h-[50px] z-50 bg-transparent transition duration-700',
-        isBgColor ? 'bg-black text-white' : '',
+        'fixed top-0 w-full h-[50px] z-50 bg-transparent transition duration-700 text-white',
+        isBgColor ? 'bg-black/90 text-white' : '',
         className,
       )}
       {...props}
