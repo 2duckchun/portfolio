@@ -9,6 +9,7 @@ export * from './ui/section'
 export * from './ui/alert'
 export * from './ui/inner-card'
 export * from './ui/dialog'
+export * from './ui/pagination-swiper'
 
 // hooks
 export * from './hooks/use-typing-effect'
