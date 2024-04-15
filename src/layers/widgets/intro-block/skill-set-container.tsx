@@ -34,14 +34,14 @@ const mockData: mockData = [
     skillKey: 'tailwind',
   },
   {
-    imageSrc: '/images/skill/zustand.png',
-    imageAlt: '주스탠드',
-    skillKey: 'zustand',
-  },
-  {
     imageSrc: '/images/skill/react-query.svg',
     imageAlt: '리액트 쿼리',
     skillKey: 'react-query',
+  },
+  {
+    imageSrc: '/images/skill/zustand.png',
+    imageAlt: '주스탠드',
+    skillKey: 'zustand',
   },
   {
     imageSrc: '/images/skill/nestjs.svg',
@@ -71,7 +71,7 @@ const SkillSetContainer: FunctionComponent<SkillSetContainerProps> = ({
 }) => {
   return (
     <InnerCard title="Skills" description="">
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:flex md:flex-wrap md:gap-5">
+      <div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
         {mockData.map((el) => {
           return (
             <SkillSetImageCard
@@ -106,9 +106,9 @@ const SkillSetImageCard = ({
   return (
     <Card
       onClick={() => open(type)}
-      className="flex max-h-[100px] max-w-[150px] cursor-pointer items-center justify-center p-2 shadow-md transition hover:scale-125 md:max-h-[200px] md:max-w-[300px] md:p-8"
+      className="flex min-h-[150px] w-full cursor-pointer items-center justify-center p-2 shadow-md transition hover:scale-125"
     >
-      <Button variant={'tag'}>
+      <Button className="size-fit" variant={'tag'}>
         <Image
           unoptimized
           alt={imageAlt}
@@ -116,9 +116,8 @@ const SkillSetImageCard = ({
           width={0}
           height={0}
           style={{
-            maxWidth: '100px',
             width: '100%',
-            maxHeight: '100px',
+            maxHeight: '150px',
             height: 'auto',
           }}
         />
