@@ -3,6 +3,7 @@
 import { Section, useTypingEffect } from '@/src/layers/shared'
 import { SkillSetContainer } from '@/src/layers/widgets'
 import { AboutMeContainer } from '@/src/layers/widgets'
+import { ProjectRecordContainer } from '@/src/layers/widgets/intro-block/project-record-container'
 
 export default function Home() {
   const { word } = useTypingEffect(
@@ -34,11 +35,11 @@ export default function Home() {
       <Section className="h-fit w-full bg-gray-400/50 px-3 py-5 lg:p-10">
         <AboutMeContainer />
       </Section>
-      <Section className="h-fit w-full bg-gray-300/50  px-3 py-5 lg:p-10">
+      <Section className="h-fit w-full bg-gray-300/50 px-3 py-5 lg:p-10">
         <SkillSetContainer />
       </Section>
-      <Section className="h-[500px] w-full bg-app-primary-004">
-        Projects
+      <Section className="h-fit w-full bg-gray-200/50 px-3 py-5 lg:p-10">
+        <ProjectRecordContainer />
       </Section>
       <Section className="h-[500px] w-full bg-app-primary-003">
         Improvement
