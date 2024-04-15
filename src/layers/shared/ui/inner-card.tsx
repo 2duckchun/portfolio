@@ -8,34 +8,41 @@ import {
   CardTitle,
 } from '@/src/layers/shared'
 interface InnerCardProps extends HTMLAttributes<HTMLDivElement> {
-  title: string
-  description: string
+  cardTitle: string | ReactNode
+  cardDescription: string
+  isNested?: boolean
   children: ReactNode
 }
 
 const InnerCard: FunctionComponent<InnerCardProps> = ({
   className,
-  title,
-  description,
+  cardTitle,
+  cardDescription,
+  isNested = false,
   children,
   ...props
 }) => {
+  const titleFontSize = isNested ? 'text-xl' : 'text-3xl'
+  const descriptionFontSize = isNested ? 'text-md' : 'text-xl'
+  const cardPadding = isNested ? 'p-2 lg:p-5' : 'p-3 lg:p-10'
+
   return (
     <Card
       className={cn(
-        'bg-white max-w-[1280px] min-h-[500px] m-auto rounded-3xl shadow-2xl p-3 lg:p-10',
+        'bg-white max-w-[1280px] min-h-[500px] m-auto rounded-3xl shadow-2xl',
+        cardPadding,
       )}
       {...props}
     >
-      <CardHeader>
-        <CardTitle className="text-center font-black-han-sans text-4xl">
-          {title}
+      <CardHeader className={cn(cardPadding)}>
+        <CardTitle className={cn('text-center font-sans', titleFontSize)}>
+          {cardTitle}
         </CardTitle>
-        <CardDescription className="text-center text-xl">
-          {description}
+        <CardDescription className={cn('text-center', descriptionFontSize)}>
+          {cardDescription}
         </CardDescription>
       </CardHeader>
-      <CardContent className="p-2 md:p-6">{children}</CardContent>
+      <CardContent className=" p-2 md:p-6">{children}</CardContent>
     </Card>
   )
 }

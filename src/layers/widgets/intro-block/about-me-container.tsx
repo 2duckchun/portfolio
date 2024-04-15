@@ -23,8 +23,8 @@ const AboutMeContainer: FunctionComponent<AboutMeContainerProps> = ({
 }) => {
   return (
     <InnerCard
-      title="About me"
-      description="안녕하세요. 프론트엔드 개발자 김태수입니다."
+      cardTitle={<h3>About Me</h3>}
+      cardDescription="안녕하세요. 프론트엔드 개발자 김태수입니다."
     >
       <IntroduceMySelf />
       <PortraitAndHistory />

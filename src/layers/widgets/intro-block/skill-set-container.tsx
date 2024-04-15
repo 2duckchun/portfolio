@@ -70,7 +70,7 @@ const SkillSetContainer: FunctionComponent<SkillSetContainerProps> = ({
   ...props
 }) => {
   return (
-    <InnerCard title="Skills" description="">
+    <InnerCard cardTitle={<h3>Skills</h3>} cardDescription="">
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
         {mockData.map((el) => {
           return (
@@ -121,6 +121,7 @@ const SkillSetImageCard = ({
             height: 'auto',
           }}
         />
+        <span className="sr-only">{imageAlt}</span>
       </Button>
     </Card>
   )
