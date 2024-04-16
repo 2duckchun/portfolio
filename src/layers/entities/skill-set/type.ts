@@ -10,3 +10,4 @@ type SkillSet =
   | 'firebase'
   | 'github'
   | 'docker'
+  | 'vue'

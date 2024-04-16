@@ -29,6 +29,11 @@ const mockData: mockData = [
     skillKey: 'react',
   },
   {
+    imageSrc: '/images/skill/vue.svg',
+    imageAlt: '뷰',
+    skillKey: 'vue',
+  },
+  {
     imageSrc: '/images/skill/tailwind.png',
     imageAlt: '테일윈드',
     skillKey: 'tailwind',
@@ -47,11 +52,6 @@ const mockData: mockData = [
     imageSrc: '/images/skill/nestjs.svg',
     imageAlt: 'Nextjs',
     skillKey: 'nestjs',
-  },
-  {
-    imageSrc: '/images/skill/firebase.svg',
-    imageAlt: 'firebase',
-    skillKey: 'firebase',
   },
   {
     imageSrc: '/images/skill/github.svg',

@@ -22,15 +22,18 @@ const InnerCard: FunctionComponent<InnerCardProps> = ({
   children,
   ...props
 }) => {
-  const titleFontSize = isNested ? 'text-xl' : 'text-3xl'
-  const descriptionFontSize = isNested ? 'text-md' : 'text-xl'
-  const cardPadding = isNested ? 'p-2 lg:p-5' : 'p-3 lg:p-10'
+  const titleFontSize = isNested ? 'text-xl' : 'text-2xl md:text-3xl'
+  const descriptionFontSize = isNested ? 'text-md' : 'text-base md:text-xl'
+  const cardPadding = isNested ? 'p-2 lg:p-5' : 'p-2 lg:p-10'
+  const cardShadow = isNested ? 'shadow-md' : 'shadow-2xl'
 
   return (
     <Card
       className={cn(
-        'bg-white max-w-[1280px] min-h-[500px] m-auto rounded-3xl shadow-2xl',
+        'bg-white max-w-[1280px] m-auto rounded-3xl shadow-2xl ',
+        cardShadow,
         cardPadding,
+        className,
       )}
       {...props}
     >
@@ -42,7 +45,7 @@ const InnerCard: FunctionComponent<InnerCardProps> = ({
           {cardDescription}
         </CardDescription>
       </CardHeader>
-      <CardContent className=" p-2 md:p-6">{children}</CardContent>
+      <CardContent className="p-2 lg:p-3">{children}</CardContent>
     </Card>
   )
 }

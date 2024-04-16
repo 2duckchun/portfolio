@@ -37,7 +37,7 @@ const PaginationSwiper: FunctionComponent<PaginationSwiperProps> = ({
                   height={0}
                   style={{
                     height: 'auto',
-                    maxWidth: '250px',
+                    maxWidth: '200px',
                     width: '100%',
                   }}
                 />

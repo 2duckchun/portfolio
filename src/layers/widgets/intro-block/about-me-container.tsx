@@ -10,10 +10,7 @@ import {
   PanelsTopLeft,
   School,
 } from 'lucide-react'
-import { SiTistory } from 'react-icons/si'
-import { FaGithub } from 'react-icons/fa'
-import { GiArchiveResearch } from 'react-icons/gi'
-import { FaReact } from 'react-icons/fa'
+
 import { InnerCard } from '@/src/layers/shared'
 import { Alert, AlertDescription, AlertTitle } from '@/src/layers/shared'
 interface AboutMeContainerProps extends HTMLAttributes<HTMLDivElement> {}
@@ -24,7 +21,7 @@ const AboutMeContainer: FunctionComponent<AboutMeContainerProps> = ({
   return (
     <InnerCard
       cardTitle={<h3>About Me</h3>}
-      cardDescription="안녕하세요. 프론트엔드 개발자 김태수입니다."
+      cardDescription="조직을 위해 일하고 끊임없이 발전하는 개발자"
     >
       <IntroduceMySelf />
       <PortraitAndHistory />
@@ -36,84 +33,76 @@ export { AboutMeContainer }
 
 const IntroduceMySelf = () => {
   return (
-    <div className="mb-3 text-center text-xl">
-      <ul className="m-auto w-fit list-disc text-left ">
-        <li>
-          탄탄한 자바스크립트 기초를 바탕으로 로직의 동작원리를 빠르게
-          캐치합니다.
-        </li>
-        <li>
-          협업과 유지보수가 쉬운 작업 환경을 구축하는 것에 관심이 많습니다.
-          <ul className="list-inside list-disc border-black marker:text-gray-300">
-            <li className="text-lg hover:text-black/50">
-              <FaGithub className="mr-2 inline-block" />
-              <Link href="https://github.com/2duckchun/nextjs-monorepo-guide">
-                (링크) 모노레포 가이드 작성
-              </Link>
-            </li>
-            <li className="text-lg hover:text-black/50">
-              <SiTistory className="mr-2 inline-block" />
-              <Link href="https://2duckchun.tistory.com/540">
-                (링크) 집합적 사고로 레이아웃 설계하기 등
-              </Link>
-            </li>
-            <li className="text-lg hover:text-black/50">
-              <SiTistory className="mr-2 inline-block" />
-              <Link href="https://2duckchun.tistory.com/516">
-                (링크) 프론트엔드 설계 아이데이션
-              </Link>
-            </li>
-          </ul>
-        </li>
-        <li>
-          지식 공유 및 토의 활동에 관심이 많습니다.
-          <ul className="list-inside list-disc border-black marker:text-gray-300">
-            <li className="text-lg hover:text-black/50">
-              <FaReact className="mr-2 inline-block" />
-              <Link href="https://ko.react.dev/reference/react/useEffect">
-                (링크) React 공식문서 useEffect 번역
-              </Link>
-            </li>
-            <li className="text-lg hover:text-black/50">
-              <FaReact className="mr-2 inline-block" />
-              <Link href="https://ko.react.dev/reference/react/useReducer">
-                (링크) React 공식문서 useReducer 번역
-              </Link>
-            </li>
-            <li className="text-lg">
-              <GiArchiveResearch className="mr-2 inline-block" />
-              (현) 한국방송통신대학교 컴퓨터과학과 스터디 운영
-            </li>
-          </ul>
-        </li>
-        <li>문제해결을 위한 의사소통에 강점이 있습니다.</li>
-      </ul>
+    <div className="flex flex-col justify-center gap-10 lg:flex-row">
+      <div className="m-auto size-[250px]">
+        <Image
+          unoptimized
+          alt="상반신"
+          width={0}
+          height={0}
+          src={'/images/my-head-2.jpg'}
+          style={{
+            width: '100%',
+            height: '100%',
+          }}
+          className="rounded-full object-cover shadow-lg"
+        />
+      </div>
+      <div className="w-full text-left text-base md:text-lg lg:w-3/4">
+        <p>안녕하세요. 함께 일하고 싶은 개발자 김태수입니다.</p>
+        <br />
+        <p>저는 제가 속한 조직을 조금이라도 더 발전시키기 위해 노력합니다.</p>
+        <p>
+          개발 이전 직장에서도 업무 간결화를 위한 엑셀 파일을 개발하여 팀에
+          공유하여 조직의 발전에 도움이 된 경험이 있으며, 개발자로 전향한 후에도
+          업무 상 모두가 불편하거나 합리적이지 못한 부분을 발견했을 때
+          팀원분들과 충분히 논의하며 개선 방법을 건의하고 있습니다. 또한 업무상
+          대화를 부드럽게 이끌어나가기 위해 팀원들과 좋은 관계를 유지하려
+          노력합니다.
+        </p>
+        <br />
+        <p>
+          저는 자바스크립트를 활용한 개발에 자신이 있습니다. 높은 자바스크립트
+          이해도를 바탕으로 기존의 코드 및 새로운 라이브러리를 빠르게 습득하여
+          업무에 활용할 수 있습니다.
+        </p>
+        <p>
+          하지만 언어에 귀속되지 않고자 노력합니다. 필요한 것을 빠르게 배워
+          적용하는 카멜레온 같은 개발자가 되어 팀에 전방위적인 도움이 되는 것이
+          제 목표입니다. 이를 위해 쉬는 시간에는 탄탄한 CS 지식을 쌓고자
+          주경야독하고 있습니다.
+        </p>
+        <br />
+        <p>
+          저는 늘 그랬던 것처럼, 조직을 위해 일하며, 끊임없이 발전할 것입니다.
+        </p>
+      </div>
     </div>
   )
 }
 
 const PortraitAndHistory = () => {
   return (
-    <div>
+    <div className="py-10">
       <div className="flex h-full flex-col justify-center gap-10 lg:flex-row">
-        <div className="relative m-auto h-[200px] w-[250px]">
-          <Image
-            alt="상반신"
-            fill
-            src={'/images/my-head-2.jpg'}
-            className="rounded-full object-cover shadow-lg"
-          />
-        </div>
         <div className="grid size-full  grid-cols-1 content-center justify-items-stretch gap-3 md:grid-cols-2">
           <Alert className="shadow-md">
-            <Contact className="size-4" />
-            <AlertTitle>이름</AlertTitle>
-            <AlertDescription>김태수</AlertDescription>
+            <Github className="size-4" />
+            <AlertTitle>Github (링크)</AlertTitle>
+            <AlertDescription className="text-base">
+              <Link href="https://github.com/2duckchun" target="_blank">
+                https://github.com/2duckchun
+              </Link>
+            </AlertDescription>
           </Alert>
           <Alert className="shadow-md">
-            <Cake className="size-4" />
-            <AlertTitle>생년월일</AlertTitle>
-            <AlertDescription>1993-08-29</AlertDescription>
+            <PanelsTopLeft className="size-4" />
+            <AlertTitle>블로그 (링크)</AlertTitle>
+            <AlertDescription className="text-base">
+              <Link href="https://2duckchun.tistory.com" target="_blank">
+                https://2duckchun.tistory.com
+              </Link>
+            </AlertDescription>
           </Alert>
           <Alert className="shadow-md">
             <School className="size-4" />
@@ -132,18 +121,14 @@ const PortraitAndHistory = () => {
             <AlertDescription>kkts9308@gmail.com</AlertDescription>
           </Alert>
           <Alert className="shadow-md">
-            <Github className="size-4" />
-            <AlertTitle>Github</AlertTitle>
-            <AlertDescription>
-              <Link href="https://github.com/2duckchun">주소(클릭)</Link>
-            </AlertDescription>
+            <Contact className="size-4" />
+            <AlertTitle>이름</AlertTitle>
+            <AlertDescription>김태수</AlertDescription>
           </Alert>
           <Alert className="shadow-md">
-            <PanelsTopLeft className="size-4" />
-            <AlertTitle>블로그</AlertTitle>
-            <AlertDescription>
-              <Link href="https://2duckchun.tistory.com/">주소(클릭)</Link>
-            </AlertDescription>
+            <Cake className="size-4" />
+            <AlertTitle>생년월일</AlertTitle>
+            <AlertDescription>1993-08-29</AlertDescription>
           </Alert>
         </div>
       </div>
