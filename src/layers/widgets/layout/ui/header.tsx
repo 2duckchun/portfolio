@@ -33,6 +33,7 @@ const Header: FunctionComponent<headerProps> = ({ className, ...props }) => {
       className={cn(
         'fixed top-0 w-full h-[50px] z-40 bg-transparent transition duration-700 justify-between md:justify-evenly flex text-white',
         isBgColor ? 'bg-black/90 text-white' : '',
+        isOpen ? 'bg-black/90 text-white transition-none' : '',
         className,
       )}
       {...props}
@@ -75,7 +76,7 @@ const Header: FunctionComponent<headerProps> = ({ className, ...props }) => {
       </Button>
       <div
         className={cn(
-          'cursor-pointer fixed bg-black/90 z-50 w-full mt-[50px] px-[10px] py-[10px] text-[14px] [&>*]:py-[5px] select-none',
+          'cursor-pointer fixed md:hidden bg-black/90 z-50 w-full mt-[50px] px-[10px] py-[10px] text-[14px] [&>*]:py-[5px] select-none',
           isOpen ? 'block' : 'hidden',
         )}
       >
