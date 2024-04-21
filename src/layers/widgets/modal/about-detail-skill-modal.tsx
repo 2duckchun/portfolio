@@ -71,6 +71,8 @@ const HeaderMapper = (type: SkillSet) => {
       return 'Nestjs'
     case 'vue':
       return 'Vue'
+    case 'typescript':
+      return 'TypeScript'
   }
 }
 
@@ -87,6 +89,16 @@ const ContentMapper = (type: SkillSet) => {
           <li>
             필요성이 있다면 쿠버네티스 등 도커를 활용할 수 있는 기술을 습득할
             예정
+          </li>
+        </ul>
+      )
+    case 'typescript':
+      return (
+        <ul className="list-disc pl-5 text-base text-black">
+          <li>대부분의 프로젝트에 타입스크립트 사용 중</li>
+          <li>
+            기본적인 타입 및 제네릭, 조건부타입, keyof, typeof 등 필요한 문법을
+            프로젝트에 맞게 도입할 수 있음
           </li>
         </ul>
       )
@@ -143,7 +155,7 @@ const ContentMapper = (type: SkillSet) => {
           </li>
           <li>
             유지보수가 용이한 레이아웃 및 디렉토리 구조를 구현하기 위해
-            고민하며, 이에 대한 본인의 생각을 블로그에 포스팅한 경험이 있음.
+            고민하며, 이에 대한 본인의 생각을 블로그에 포스팅하고 있음.
           </li>
         </ul>
       )
@@ -200,10 +212,6 @@ const ContentMapper = (type: SkillSet) => {
     case 'vue':
       return (
         <ul className="list-disc pl-5 text-base text-black">
-          <li>
-            높은 자바스크립트 이해도를 바탕으로 빠르게 Vue 프레임워크를 배워
-            현업에 투입되었음.
-          </li>
           <li>
             Vue2로 개발된 회사의 레거시 프로젝트를 유지보수했던 경험이 있음.
           </li>

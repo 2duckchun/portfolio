@@ -19,6 +19,11 @@ const mockData: mockData = [
     skillKey: 'html-js-css',
   },
   {
+    imageSrc: '/images/skill/typescript.svg',
+    imageAlt: 'typescript',
+    skillKey: 'typescript',
+  },
+  {
     imageSrc: '/images/skill/nextjs.png',
     imageAlt: '넥스트js',
     skillKey: 'nextjs',
@@ -52,11 +57,6 @@ const mockData: mockData = [
     imageSrc: '/images/skill/nestjs.svg',
     imageAlt: 'Nextjs',
     skillKey: 'nestjs',
-  },
-  {
-    imageSrc: '/images/skill/github.svg',
-    imageAlt: 'github',
-    skillKey: 'github',
   },
   {
     imageSrc: '/images/skill/docker.svg',

@@ -11,3 +11,4 @@ type SkillSet =
   | 'github'
   | 'docker'
   | 'vue'
+  | 'typescript'
