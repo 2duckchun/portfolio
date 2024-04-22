@@ -9,6 +9,8 @@ import {
   Mail,
   PanelsTopLeft,
   School,
+  Terminal,
+  ChevronRight,
 } from 'lucide-react'
 
 import { InnerCard } from '@/src/layers/shared'
@@ -49,25 +51,115 @@ const IntroduceMySelf = () => {
         />
       </div>
       <div className="w-full text-left text-base md:text-lg lg:w-3/4">
-        <p>
+        {/* <p>
           안녕하세요. 탄탄한 기본기를 바탕으로 필요한 것들을 빠르게 배워 현실에
           적용하는 개발자 김태수입니다.
-        </p>
-
-        <br />
-        <p>저는 제가 속한 조직을 발전시키기 위해 노력합니다.</p>
-        <p>
-          개발 이전 직장에서도 업무 간결화를 위한 엑셀 파일을 개발하여 팀에
-          공유하여 조직의 발전에 도움이 된 경험이 있으며, 개발자로 전향한 후에도
-          업무 상 모두가 불편하거나 합리적이지 못한 부분을 발견했을 때
-          팀원분들과 충분히 논의하며 개선 방법을 건의하며 조직의 문화에
-          이바지합니다. 또한 동료들과 개발에 대해 토론하며 지식을 공유하는
-          활동을 즐깁니다. 해결이 필요한 문제나 알아낸 지식들을 동료들에게
-          공유해야할 필요성이 있을 때 그들을 기꺼이 화이트보드 앞으로 모셔올 수
-          있는 적극성도 가지고 있습니다. 이러한 커뮤니케이션을 원활하게
-          이끌어가기 위해 팀원들과 늘 좋은 관계를 유지합니다.
-        </p>
-        <br />
+        </p> */}
+        {/* <br /> */}
+        <div className="flex flex-col gap-4">
+          <div className="rounded-md bg-[#181818] p-3 text-base text-[#cccccc]">
+            <h2 className="pb-2 font-bold">
+              <Terminal className="inline-block size-5" />
+              조직을_위해_일하는_개발자
+            </h2>
+            <div className="pl-3">
+              <p>
+                업무 상 모두가 불편하거나 합리적이지 못한 부분이 있다면
+                팀원분들과 충분히 논의하며 문제점을 개선합니다.
+              </p>
+              <ul className="py-2 pl-3">
+                <li>
+                  <ChevronRight className="inline-block size-5" />
+                  린트, 스타일, 주요 라이브러리가 같은 웹 프로젝트에{' '}
+                  <span className="text-[#0096FF]">모노레포</span>를 도입하여
+                  프로젝트 셋팅 시간 감소
+                </li>
+                <li>
+                  <ChevronRight className="inline-block size-5" />
+                  <span className="text-[#44d384]">엑셀</span> 기반의 API 문서를{' '}
+                  <span className="text-[#FF6C36]">Postman</span>으로 이관하여
+                  팀 내 개발 환경 개선
+                </li>
+                <li>
+                  <ChevronRight className="inline-block size-5" />
+                  이미지를 DB에 <span className="text-[#439A00]">base64</span>로
+                  저장하는 로직 수정을 건의하여 스토리지 업로드 후{' '}
+                  <span className="text-[#5CD9D4]">URL</span>을 저장하는
+                  방식으로 해결
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="rounded-md bg-[#181818] p-3 text-base text-[#cccccc]">
+            <h2 className="pb-2 font-bold">
+              <Terminal className="inline-block size-5" />
+              적극적으로_소통하는_개발자
+            </h2>
+            <div className="pl-3">
+              <p>
+                동료들과 개발에 대해 토론하며 지식을 공유하는 활동을 즐깁니다.
+                해결이 필요한 문제나 알아낸 지식들을 동료들에게 공유해야할
+                필요성이 있을 때 그들을 기꺼이 화이트보드 앞으로 모셔올 수 있는
+                적극성도 가지고 있습니다. <br />
+                커뮤니케이션을 원활하게 이끌어가기 위해 팀원들과 늘 좋은 관계를
+                유지합니다.
+              </p>
+              <ul className="py-2 pl-3">
+                <li>
+                  <ChevronRight className="inline-block size-5" />
+                  동료가 개발에 관해 고민을 토로하면 분야를 가리지 않고{' '}
+                  <span className="text-blue-300">문제를 함께 해결함</span>
+                </li>
+                <li>
+                  <ChevronRight className="inline-block size-5" />
+                  여유가 있는 상황에서는 알게된 코드를 동료들에게 공유하거나
+                  동료가 작성한 코드에 관심을 가짐
+                </li>
+                <li>
+                  <ChevronRight className="inline-block size-5" />
+                  작성한 코드의 의도를 설명하면서 상대를 설득하거나 내 코드의
+                  문제를 식별함
+                </li>
+                <li>
+                  <ChevronRight className="inline-block size-5" />
+                  일련의 과정을 통해 함께 일한 동료들에게 긍정적인{' '}
+                  <span className="text-orange-400">Peer Review</span>를 받음
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* <div className="rounded-md bg-[#181818] p-3 text-base text-[#cccccc]">
+            <h2 className="pb-2 font-bold">
+              <Terminal className="inline-block size-5" />
+              _개발자
+            </h2>
+            <div className="pl-3">
+              <p>폭 넓은 프론트엔드 지식으로 문제를 해결합니다.</p>
+              <ul className="py-2 pl-3">
+                <li>
+                  <ChevronRight className="inline-block size-5" />
+                  린트, 스타일, 주요 라이브러리가 같은 웹 프로젝트에{' '}
+                  <span className="text-[#0096FF]">모노레포</span>를 도입하여
+                  프로젝트 셋팅 시간 감소
+                </li>
+                <li>
+                  <ChevronRight className="inline-block size-5" />
+                  <span className="text-[#44d384]">엑셀</span> 기반의 API 문서를{' '}
+                  <span className="text-[#FF6C36]">Postman</span>으로 이관하여
+                  팀 내 개발 환경 개선
+                </li>
+                <li>
+                  <ChevronRight className="inline-block size-5" />
+                  이미지를 DB에 <span className="text-[#439A00]">base64</span>로
+                  저장하는 로직 수정을 건의하여 스토리지 업로드 후{' '}
+                  <span className="text-[#5CD9D4]">URL</span>을 저장하는
+                  방식으로 해결
+                </li>
+              </ul>
+            </div>
+          </div> */}
+        </div>
+        {/* <br />
         <p>
           저는 자바스크립트를 활용한 개발에 자신이 있습니다. 높은 자바스크립트
           이해도를 바탕으로 기존의 코드 및 새로운 라이브러리를 빠르게 습득하여
@@ -82,7 +174,7 @@ const IntroduceMySelf = () => {
         <br />
         <p>
           저는 늘 그랬던 것처럼, 조직을 위해 일하며, 끊임없이 발전할 것입니다.
-        </p>
+        </p> */}
       </div>
     </div>
   )
