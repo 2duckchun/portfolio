@@ -20,24 +20,23 @@ export const FirstNotebookIntroContainer: FunctionComponent<
   FirstNotebookIntroContainerProps
 > = ({ className }) => {
   return (
-    <Canvas
-      className={cn(className)}
-      camera={{ position: [-5, 0, -20], fov: 45 }}
-    >
-      <pointLight position={[10, 10, 10]} intensity={1.5} />
-      <Suspense fallback={<Html center className="w-full"></Html>}>
-        <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>
-          <NotebookUI />
-        </group>
-        <Environment preset="city" />
-      </Suspense>
-      <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
-      <OrbitControls
-        enablePan={false}
-        enableZoom={false}
-        minPolarAngle={Math.PI / 2.2}
-        maxPolarAngle={Math.PI / 2.2}
-      />
-    </Canvas>
+    <section className={cn(className)}>
+      <Canvas camera={{ position: [-5, 0, -20], fov: 45 }}>
+        <pointLight position={[10, 10, 10]} intensity={1.5} />
+        <Suspense fallback={<Html center className="w-full"></Html>}>
+          <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>
+            <NotebookUI />
+          </group>
+          <Environment preset="city" />
+        </Suspense>
+        <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
+        <OrbitControls
+          enablePan={false}
+          enableZoom={false}
+          minPolarAngle={Math.PI / 2.2}
+          maxPolarAngle={Math.PI / 2.2}
+        />
+      </Canvas>
+    </section>
   )
 }
