@@ -4,71 +4,10 @@ import { FunctionComponent, HTMLAttributes } from 'react'
 import { InnerCard } from '../../shared/ui/inner-card'
 import Image from 'next/image'
 import { Button, Card, useSkillModalStore } from '../../shared'
+import { SkillDataList } from '../../entities'
 interface SkillSetContainerProps extends HTMLAttributes<HTMLDivElement> {}
 
-type mockData = {
-  imageSrc: string
-  imageAlt: string
-  skillKey: SkillSet
-}[]
-
-const mockData: mockData = [
-  {
-    imageSrc: '/images/skill/html-js-css.png',
-    imageAlt: 'html-js-css',
-    skillKey: 'html-js-css',
-  },
-  {
-    imageSrc: '/images/skill/typescript.svg',
-    imageAlt: 'typescript',
-    skillKey: 'typescript',
-  },
-  {
-    imageSrc: '/images/skill/nextjs.png',
-    imageAlt: '넥스트js',
-    skillKey: 'nextjs',
-  },
-  {
-    imageSrc: '/images/skill/react.png',
-    imageAlt: '리액트',
-    skillKey: 'react',
-  },
-  {
-    imageSrc: '/images/skill/vue.svg',
-    imageAlt: '뷰',
-    skillKey: 'vue',
-  },
-  {
-    imageSrc: '/images/skill/tailwind.png',
-    imageAlt: '테일윈드',
-    skillKey: 'tailwind',
-  },
-  {
-    imageSrc: '/images/skill/react-query.svg',
-    imageAlt: '리액트 쿼리',
-    skillKey: 'react-query',
-  },
-  {
-    imageSrc: '/images/skill/zustand.png',
-    imageAlt: '주스탠드',
-    skillKey: 'zustand',
-  },
-  {
-    imageSrc: '/images/skill/nestjs.svg',
-    imageAlt: 'Nextjs',
-    skillKey: 'nestjs',
-  },
-  {
-    imageSrc: '/images/skill/docker.svg',
-    imageAlt: 'docker',
-    skillKey: 'docker',
-  },
-]
-
-const SkillSetContainer: FunctionComponent<SkillSetContainerProps> = ({
-  className,
-  ...props
-}) => {
+const SkillSetContainer: FunctionComponent<SkillSetContainerProps> = () => {
   return (
     <section
       id="skills"
@@ -76,7 +15,7 @@ const SkillSetContainer: FunctionComponent<SkillSetContainerProps> = ({
     >
       <InnerCard cardTitle={<h3>Skills</h3>} cardDescription="">
         <div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
-          {mockData.map((el) => {
+          {SkillDataList.map((el) => {
             return (
               <SkillSetImageCard
                 type={el.skillKey}
@@ -98,7 +37,6 @@ interface SkillSetImageCardProps {
   imageSrc: string
   imageAlt: string
   type: SkillSet
-  // TODO: 모달기능 추가 예정
 }
 
 const SkillSetImageCard = ({

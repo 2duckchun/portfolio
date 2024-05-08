@@ -11,7 +11,7 @@ interface ProjectRecordContainerProps extends HTMLAttributes<HTMLDivElement> {}
 
 const ProjectRecordContainer: FunctionComponent<
   ProjectRecordContainerProps
-> = ({ className, ...props }) => {
+> = ({ className }) => {
   return (
     <section
       id="projects"

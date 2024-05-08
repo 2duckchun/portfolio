@@ -4,7 +4,6 @@ interface PeerReviewProps extends HTMLAttributes<HTMLDivElement> {}
 
 const PeerReviewContainer: FunctionComponent<PeerReviewProps> = ({
   className,
-  ...props
 }) => {
   return (
     <section

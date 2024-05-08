@@ -1,10 +1,10 @@
 'use client'
 
-import { Button } from '@/src/layers/shared'
 import { cn } from '@/src/layers/shared/lib/utils'
+import { FunctionComponent, HTMLAttributes, useEffect, useState } from 'react'
+import { Button } from '@/src/layers/shared'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
-import { FunctionComponent, HTMLAttributes, useEffect, useState } from 'react'
 interface headerProps extends HTMLAttributes<HTMLDivElement> {}
 
 const TOP_BAR_HEIGHT = 20
@@ -13,6 +13,7 @@ const Header: FunctionComponent<headerProps> = ({ className, ...props }) => {
   const [isBgColor, setIsBgColor] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const MenuIcon = isOpen ? X : Menu
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > TOP_BAR_HEIGHT) {
@@ -47,6 +48,7 @@ const Header: FunctionComponent<headerProps> = ({ className, ...props }) => {
       >
         2DC
       </Button>
+      {/* 데스크톱 헤더 */}
       <div className="hidden items-center justify-evenly gap-5 md:flex">
         <Link href={'#about-me'}>
           <Button className={cn('bg-transparent')}>About Me</Button>
@@ -74,6 +76,7 @@ const Header: FunctionComponent<headerProps> = ({ className, ...props }) => {
       >
         <MenuIcon />
       </Button>
+      {/* 모바일 헤더 */}
       <div
         className={cn(
           'cursor-pointer fixed md:hidden bg-black/90 z-50 w-full mt-[50px] px-[10px] py-[10px] text-[14px] [&>*]:py-[5px] select-none',

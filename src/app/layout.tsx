@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Noto_Sans_KR, Black_Han_Sans } from 'next/font/google'
-import { AboutDetailSkillModal } from '../layers/widgets/modal/about-detail-skill-modal'
 import './globals.css'
+import { ModalProvider } from '../layers/app'
 
 const noto_sans_kr = Noto_Sans_KR({
   subsets: ['latin'],
@@ -33,7 +33,7 @@ export default function RootLayout({
       className={`${noto_sans_kr.variable} ${black_han_sans.variable}`}
     >
       <body>
-        <AboutDetailSkillModal />
+        <ModalProvider />
         {children}
       </body>
     </html>

@@ -12,3 +12,9 @@ type SkillSet =
   | 'docker'
   | 'vue'
   | 'typescript'
+
+type SkillData = {
+  imageSrc: string
+  imageAlt: string
+  skillKey: SkillSet
+}[]
