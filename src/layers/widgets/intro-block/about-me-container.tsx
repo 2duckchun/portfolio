@@ -1,5 +1,7 @@
 import { FunctionComponent, HTMLAttributes } from 'react'
 import Image from 'next/image'
+import { InnerCard } from '@/src/layers/shared'
+import { Alert, AlertDescription, AlertTitle } from '@/src/layers/shared'
 import Link from 'next/link'
 import {
   Cake,
@@ -13,21 +15,22 @@ import {
   ChevronRight,
 } from 'lucide-react'
 
-import { InnerCard } from '@/src/layers/shared'
-import { Alert, AlertDescription, AlertTitle } from '@/src/layers/shared'
 interface AboutMeContainerProps extends HTMLAttributes<HTMLDivElement> {}
 
-const AboutMeContainer: FunctionComponent<AboutMeContainerProps> = ({
-  className,
-}) => {
+const AboutMeContainer: FunctionComponent<AboutMeContainerProps> = () => {
   return (
-    <InnerCard
-      cardTitle={<h3>About Me</h3>}
-      cardDescription="조직을 위해 일하고 끊임없이 발전하는 개발자"
+    <section
+      id="about-me"
+      className="h-fit w-full bg-gray-200/50 px-3 py-5 lg:p-10"
     >
-      <IntroduceMySelf />
-      <PortraitAndHistory />
-    </InnerCard>
+      <InnerCard
+        cardTitle={<h3>About Me</h3>}
+        cardDescription="조직을 위해 일하고 끊임없이 발전하는 개발자"
+      >
+        <IntroduceMySelf />
+        <PortraitAndHistory />
+      </InnerCard>
+    </section>
   )
 }
 
@@ -51,11 +54,6 @@ const IntroduceMySelf = () => {
         />
       </div>
       <div className="w-full text-left text-base md:text-lg lg:w-3/4">
-        {/* <p>
-          안녕하세요. 탄탄한 기본기를 바탕으로 필요한 것들을 빠르게 배워 현실에
-          적용하는 개발자 김태수입니다.
-        </p> */}
-        {/* <br /> */}
         <div className="flex flex-col gap-4">
           <div className="rounded-md bg-[#181818] p-3 text-base text-[#cccccc]">
             <h2 className="pb-2 font-bold">
@@ -128,53 +126,7 @@ const IntroduceMySelf = () => {
               </ul>
             </div>
           </div>
-          {/* <div className="rounded-md bg-[#181818] p-3 text-base text-[#cccccc]">
-            <h2 className="pb-2 font-bold">
-              <Terminal className="inline-block size-5" />
-              _개발자
-            </h2>
-            <div className="pl-3">
-              <p>폭 넓은 프론트엔드 지식으로 문제를 해결합니다.</p>
-              <ul className="py-2 pl-3">
-                <li>
-                  <ChevronRight className="inline-block size-5" />
-                  린트, 스타일, 주요 라이브러리가 같은 웹 프로젝트에{' '}
-                  <span className="text-[#0096FF]">모노레포</span>를 도입하여
-                  프로젝트 셋팅 시간 감소
-                </li>
-                <li>
-                  <ChevronRight className="inline-block size-5" />
-                  <span className="text-[#44d384]">엑셀</span> 기반의 API 문서를{' '}
-                  <span className="text-[#FF6C36]">Postman</span>으로 이관하여
-                  팀 내 개발 환경 개선
-                </li>
-                <li>
-                  <ChevronRight className="inline-block size-5" />
-                  이미지를 DB에 <span className="text-[#439A00]">base64</span>로
-                  저장하는 로직 수정을 건의하여 스토리지 업로드 후{' '}
-                  <span className="text-[#5CD9D4]">URL</span>을 저장하는
-                  방식으로 해결
-                </li>
-              </ul>
-            </div>
-          </div> */}
         </div>
-        {/* <br />
-        <p>
-          저는 자바스크립트를 활용한 개발에 자신이 있습니다. 높은 자바스크립트
-          이해도를 바탕으로 기존의 코드 및 새로운 라이브러리를 빠르게 습득하여
-          업무에 활용할 수 있습니다.
-        </p>
-        <p>
-          하지만 언어에 귀속되지 않고자 노력합니다. 필요한 것을 빠르게 배워
-          적용하는 카멜레온 같은 개발자가 되어 팀에 전방위적인 도움이 되는 것이
-          제 목표입니다. 이를 위해 제 워라밸은 탄탄한 CS 지식을 쌓는 것에 맞춰져
-          있습니다.
-        </p>
-        <br />
-        <p>
-          저는 늘 그랬던 것처럼, 조직을 위해 일하며, 끊임없이 발전할 것입니다.
-        </p> */}
       </div>
     </div>
   )

@@ -70,20 +70,25 @@ const SkillSetContainer: FunctionComponent<SkillSetContainerProps> = ({
   ...props
 }) => {
   return (
-    <InnerCard cardTitle={<h3>Skills</h3>} cardDescription="">
-      <div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
-        {mockData.map((el) => {
-          return (
-            <SkillSetImageCard
-              type={el.skillKey}
-              key={el.imageAlt}
-              imageSrc={el.imageSrc}
-              imageAlt={el.imageAlt}
-            />
-          )
-        })}
-      </div>
-    </InnerCard>
+    <section
+      id="skills"
+      className="h-fit w-full bg-gray-200/50 px-3 py-5 lg:p-10"
+    >
+      <InnerCard cardTitle={<h3>Skills</h3>} cardDescription="">
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
+          {mockData.map((el) => {
+            return (
+              <SkillSetImageCard
+                type={el.skillKey}
+                key={el.imageAlt}
+                imageSrc={el.imageSrc}
+                imageAlt={el.imageAlt}
+              />
+            )
+          })}
+        </div>
+      </InnerCard>
+    </section>
   )
 }
 
