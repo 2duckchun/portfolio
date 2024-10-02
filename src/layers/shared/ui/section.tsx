@@ -1,5 +1,5 @@
-import { cn } from '@/src/layers/shared/lib/utils'
 import { FunctionComponent, HTMLAttributes } from 'react'
+import { cn } from '@/src/layers/shared/lib/utils'
 interface containerProps extends HTMLAttributes<HTMLDivElement> {}
 
 const Section: FunctionComponent<containerProps> = ({

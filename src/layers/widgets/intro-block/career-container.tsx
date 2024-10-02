@@ -1,6 +1,6 @@
 import { FunctionComponent, HTMLAttributes } from 'react'
-import { Alert, AlertDescription, AlertTitle, InnerCard } from '../../shared'
 import Image from 'next/image'
+import { Alert, AlertDescription, AlertTitle, InnerCard } from '../../shared'
 interface CareerContainerProps extends HTMLAttributes<HTMLDivElement> {}
 
 const CareerContainer: FunctionComponent<CareerContainerProps> = ({
