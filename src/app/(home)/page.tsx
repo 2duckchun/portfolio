@@ -1,13 +1,12 @@
 'use client'
 
-import { Section } from '@/src/layers/shared'
 import {
   BgTypingContainer,
   CareerContainer,
   PeerReviewContainer,
   SkillSetContainer,
   AboutMeContainer,
-  ProjectRecordContainer,
+  ProjectRecordContainer
 } from '@/src/layers/widgets'
 
 export default function Home() {

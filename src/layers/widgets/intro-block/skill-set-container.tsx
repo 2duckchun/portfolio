@@ -1,10 +1,10 @@
 'use client'
 
 import { FunctionComponent, HTMLAttributes } from 'react'
-import { InnerCard } from '../../shared/ui/inner-card'
 import Image from 'next/image'
-import { Button, Card, useSkillModalStore } from '../../shared'
 import { SkillDataList } from '../../entities'
+import { Button, Card, useSkillModalStore } from '../../shared'
+import { InnerCard } from '../../shared/ui/inner-card'
 interface SkillSetContainerProps extends HTMLAttributes<HTMLDivElement> {}
 
 const SkillSetContainer: FunctionComponent<SkillSetContainerProps> = () => {
@@ -42,7 +42,7 @@ interface SkillSetImageCardProps {
 const SkillSetImageCard = ({
   imageAlt,
   imageSrc,
-  type,
+  type
 }: SkillSetImageCardProps) => {
   const { open } = useSkillModalStore()
 
@@ -61,7 +61,7 @@ const SkillSetImageCard = ({
           style={{
             width: '100%',
             maxHeight: '150px',
-            height: 'auto',
+            height: 'auto'
           }}
         />
         <span className="sr-only">{imageAlt}</span>

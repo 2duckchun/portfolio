@@ -1,12 +1,12 @@
-import { cn } from '@/src/layers/shared/lib/utils'
 import { FunctionComponent, HTMLAttributes, ReactNode } from 'react'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from '@/src/layers/shared'
+import { cn } from '@/src/layers/shared/lib/utils'
 interface InnerCardProps extends HTMLAttributes<HTMLDivElement> {
   cardTitle: string | ReactNode
   cardDescription: string
@@ -33,7 +33,7 @@ const InnerCard: FunctionComponent<InnerCardProps> = ({
         'bg-white max-w-[1280px] m-auto rounded-3xl shadow-2xl ',
         cardShadow,
         cardPadding,
-        className,
+        className
       )}
       {...props}
     >

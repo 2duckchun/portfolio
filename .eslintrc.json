@@ -1,7 +1,42 @@
 {
+  "root": true,
+  "plugins": ["import", "unused-imports"],
   "extends": [
     "next/core-web-vitals",
     "plugin:tailwindcss/recommended",
     "prettier"
-  ]
+  ],
+  "rules": {
+    "no-var": "error",
+    // "no-console": "warn",
+    "eqeqeq": "error",
+    "unused-imports/no-unused-imports": "warn",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          { "pattern": "react", "group": "builtin", "position": "after" },
+          { "pattern": "react", "group": "external", "position": "before" },
+          { "pattern": "next", "group": "builtin", "position": "before" },
+          { "pattern": "next", "group": "external", "position": "before" },
+          { "pattern": "react-dom", "group": "builtin", "position": "after" }
+        ],
+        "pathGroupsExcludedImportTypes": ["react", "react-dom", "next"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
 }

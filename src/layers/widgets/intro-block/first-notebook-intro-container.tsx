@@ -5,11 +5,11 @@ import {
   Environment,
   ContactShadows,
   OrbitControls,
-  Html,
+  Html
 } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import { cn } from '@/src/layers/shared'
 import { NotebookUI } from '@/src/layers/entities'
+import { cn } from '@/src/layers/shared'
 
 interface FirstNotebookIntroContainerProps
   extends HTMLAttributes<HTMLCanvasElement> {

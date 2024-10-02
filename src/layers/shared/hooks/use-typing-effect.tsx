@@ -8,7 +8,7 @@ const BACKWARD = 'backward'
 export const useTypingEffect = (
   words: string[],
   keySpeed = 1000,
-  maxPauseAmount = 10,
+  maxPauseAmount = 10
 ) => {
   const [wordIndex, setWordIndex] = useState(0)
   const [currentWord, setCurrentWord] = useState(words[wordIndex].split(''))
@@ -87,7 +87,7 @@ export const useTypingEffect = (
       </span>
     ),
     start: () => setIsStopped(false),
-    stop,
+    stop
   }
 }
 

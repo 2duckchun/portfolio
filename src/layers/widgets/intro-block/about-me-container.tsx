@@ -1,8 +1,4 @@
 import { FunctionComponent, HTMLAttributes } from 'react'
-import Image from 'next/image'
-import { InnerCard } from '@/src/layers/shared'
-import { Alert, AlertDescription, AlertTitle } from '@/src/layers/shared'
-import Link from 'next/link'
 import {
   Cake,
   Contact,
@@ -12,8 +8,12 @@ import {
   PanelsTopLeft,
   School,
   Terminal,
-  ChevronRight,
+  ChevronRight
 } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { InnerCard } from '@/src/layers/shared'
+import { Alert, AlertDescription, AlertTitle } from '@/src/layers/shared'
 
 interface AboutMeContainerProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -48,7 +48,7 @@ const IntroduceMySelf = () => {
           src={'/images/my-head-2.jpg'}
           style={{
             width: '100%',
-            height: '100%',
+            height: '100%'
           }}
           className="rounded-full object-cover shadow-lg"
         />

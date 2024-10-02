@@ -18,13 +18,13 @@ type SkillModalStore<T> = Pick<ModalStore, 'toggle' | 'close'> & {
 export const useSkillModalStore = create<SkillModalStore<SkillSet>>((set) => ({
   modalData: {
     isOpen: false,
-    type: 'nextjs',
+    type: 'nextjs'
   },
   toggle: (isOpen: boolean) =>
     set((state) => ({ modalData: { ...state.modalData, isOpen } })),
   open: (type: SkillSet) => set({ modalData: { isOpen: true, type: type } }),
   close: () =>
     set((state) => ({
-      modalData: { ...state.modalData, isOpen: false },
-    })),
+      modalData: { ...state.modalData, isOpen: false }
+    }))
 }))

@@ -1,10 +1,10 @@
 'use client'
 
-import { cn } from '@/src/layers/shared/lib/utils'
-import Image from 'next/image'
 import { FunctionComponent, HTMLAttributes } from 'react'
+import Image from 'next/image'
 import { Pagination, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { cn } from '@/src/layers/shared/lib/utils'
 
 interface PaginationSwiperProps extends HTMLAttributes<HTMLDivElement> {
   swipeImageData: SwipeImageData
@@ -19,7 +19,7 @@ const PaginationSwiper: FunctionComponent<PaginationSwiperProps> = ({
     <div className={cn(className)} {...props}>
       <Swiper
         pagination={{
-          type: 'fraction',
+          type: 'fraction'
         }}
         navigation={true}
         className="size-full"
@@ -38,7 +38,7 @@ const PaginationSwiper: FunctionComponent<PaginationSwiperProps> = ({
                   style={{
                     height: 'auto',
                     maxWidth: '200px',
-                    width: '100%',
+                    width: '100%'
                   }}
                 />
               </div>

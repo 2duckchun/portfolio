@@ -1,12 +1,12 @@
 import { FunctionComponent, HTMLAttributes } from 'react'
-import { InnerCard } from '../../shared'
-import { PaginationSwiper } from '../../shared/ui/pagination-swiper'
+import Image from 'next/image'
 import {
   DPLANIT_AI_REPORT_SWIPE_DATA,
   DPLANIT_HOMEPAGE_SWIPE_DATA,
-  WITH_PLANIT_SWIPE_DATA,
+  WITH_PLANIT_SWIPE_DATA
 } from '../../entities'
-import Image from 'next/image'
+import { InnerCard } from '../../shared'
+import { PaginationSwiper } from '../../shared/ui/pagination-swiper'
 interface ProjectRecordContainerProps extends HTMLAttributes<HTMLDivElement> {}
 
 const ProjectRecordContainer: FunctionComponent<

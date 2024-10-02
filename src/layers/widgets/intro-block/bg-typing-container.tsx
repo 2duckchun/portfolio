@@ -11,10 +11,10 @@ const BgTypingContainer: FunctionComponent<BgTypingContainerProps> = ({
       '협업하기 편한',
       '끊임없이 발전하는',
       '조직을 위해 일하는',
-      '기술적 호기심이 왕성한',
+      '기술적 호기심이 왕성한'
     ],
     130,
-    20,
+    20
   )
 
   return (

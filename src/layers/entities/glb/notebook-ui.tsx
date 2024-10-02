@@ -1,11 +1,11 @@
 'use client'
 
 import { useRef } from 'react'
-import { Group, MathUtils } from 'three'
 import { Html, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
-import { Button, useTypingEffect } from '@/src/layers/shared'
 import Image from 'next/image'
+import { Group, MathUtils } from 'three'
+import { Button, useTypingEffect } from '@/src/layers/shared'
 
 export const NotebookUI = ({ ...props }) => {
   const group = useRef<Group>(null)
@@ -18,22 +18,22 @@ export const NotebookUI = ({ ...props }) => {
     group.current.rotation.x = MathUtils.lerp(
       group.current.rotation.x,
       Math.cos(t / 2) / 20 + 0.25,
-      0.1,
+      0.1
     )
     group.current.rotation.y = MathUtils.lerp(
       group.current.rotation.y,
       Math.sin(t / 4) / 20,
-      0.1,
+      0.1
     )
     group.current.rotation.z = MathUtils.lerp(
       group.current.rotation.z,
       Math.sin(t / 8) / 20,
-      0.1,
+      0.1
     )
     group.current.position.y = MathUtils.lerp(
       group.current.position.y,
       (-2 + Math.sin(t / 2)) / 2,
-      0.1,
+      0.1
     )
   })
 
@@ -102,10 +102,10 @@ const HtmlInNotebook = () => {
       '끊임없이 공부하는',
       '조직을 위해 일하는',
       '기술적 호기심이 왕성한',
-      '멋쟁이 프론트엔드',
+      '멋쟁이 프론트엔드'
     ],
     130,
-    20,
+    20
   )
 
   return (
@@ -134,7 +134,7 @@ const HtmlInNotebook = () => {
           onClick={() => {
             window.scrollTo({
               top: window.innerHeight - 50,
-              behavior: 'smooth',
+              behavior: 'smooth'
             })
           }}
           className="h-[70px] rounded-full px-10 text-3xl "

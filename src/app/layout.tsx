@@ -7,23 +7,23 @@ const noto_sans_kr = Noto_Sans_KR({
   subsets: ['latin'],
   display: 'swap',
   fallback: ['sans-serif'],
-  variable: '--font-sans-kr',
+  variable: '--font-sans-kr'
 })
 
 const black_han_sans = Black_Han_Sans({
   subsets: ['latin'],
   weight: '400',
   fallback: ['sans-serif'],
-  variable: '--font-black-han-sans',
+  variable: '--font-black-han-sans'
 })
 
 export const metadata: Metadata = {
   title: '김태수의 포트폴리오',
-  description: '안녕하세요. 프론트엔드 개발자 김태수의 포트폴리오입니다.',
+  description: '안녕하세요. 프론트엔드 개발자 김태수의 포트폴리오입니다.'
 }
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode
 }>) {

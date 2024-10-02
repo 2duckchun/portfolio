@@ -1,10 +1,10 @@
 'use client'
 
-import { cn } from '@/src/layers/shared/lib/utils'
 import { FunctionComponent, HTMLAttributes, useEffect, useState } from 'react'
-import { Button } from '@/src/layers/shared'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import { Button } from '@/src/layers/shared'
+import { cn } from '@/src/layers/shared/lib/utils'
 interface headerProps extends HTMLAttributes<HTMLDivElement> {}
 
 const TOP_BAR_HEIGHT = 20
@@ -35,7 +35,7 @@ const Header: FunctionComponent<headerProps> = ({ className, ...props }) => {
         'fixed top-0 w-full h-[50px] z-40 bg-transparent transition duration-700 justify-between md:justify-evenly flex text-white',
         isBgColor ? 'bg-black/90 text-white' : '',
         isOpen ? 'bg-black/90 text-white transition-none' : '',
-        className,
+        className
       )}
       {...props}
     >
@@ -80,7 +80,7 @@ const Header: FunctionComponent<headerProps> = ({ className, ...props }) => {
       <div
         className={cn(
           'cursor-pointer fixed md:hidden bg-black/90 z-50 w-full mt-[50px] px-[10px] py-[10px] text-[14px] [&>*]:py-[5px] select-none',
-          isOpen ? 'block' : 'hidden',
+          isOpen ? 'block' : 'hidden'
         )}
       >
         <div className="flex flex-col">

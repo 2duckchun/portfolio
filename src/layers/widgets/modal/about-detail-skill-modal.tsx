@@ -10,7 +10,7 @@ import {
   DialogFooter,
   DialogHeader,
   useIsMounted,
-  useSkillModalStore,
+  useSkillModalStore
 } from '@/src/layers/shared'
 interface AboutDetailSkillModalProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -19,7 +19,7 @@ const AboutDetailSkillModal: FunctionComponent<
 > = () => {
   const {
     modalData: { isOpen, type },
-    toggle,
+    toggle
   } = useSkillModalStore()
 
   const isMounted = useIsMounted()

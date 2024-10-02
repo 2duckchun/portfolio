@@ -3,7 +3,7 @@ import { Alert, AlertDescription, AlertTitle, InnerCard } from '../../shared'
 interface PeerReviewProps extends HTMLAttributes<HTMLDivElement> {}
 
 const PeerReviewContainer: FunctionComponent<PeerReviewProps> = ({
-  className,
+  className
 }) => {
   return (
     <section

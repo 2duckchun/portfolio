@@ -12,9 +12,9 @@
       "  return <div className={cn(className)} {...props}>${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}</div>",
       "}",
       "",
-      "export {${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}}",
+      "export {${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}}"
     ],
-    "description": "Typescript React Function Component",
+    "description": "Typescript React Function Component"
   },
 
   "Next Layout": {
@@ -36,9 +36,9 @@
       "  return <main>{children}</main>",
       "}",
       "",
-      "export default $1${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}",
+      "export default $1${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}"
     ],
-    "description": "Nextjs Layout File",
+    "description": "Nextjs Layout File"
   },
 
   "Next Page": {
@@ -53,8 +53,8 @@
       "  return <main>$1${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}</main>",
       "}",
       "",
-      "export default $1${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}",
+      "export default $1${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}"
     ],
-    "description": "Nextjs Page",
-  },
+    "description": "Nextjs Page"
+  }
 }
