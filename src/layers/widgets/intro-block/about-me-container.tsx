@@ -25,9 +25,23 @@ const AboutMeContainer: FunctionComponent<AboutMeContainerProps> = () => {
     >
       <InnerCard
         cardTitle={<h3>About Me</h3>}
-        cardDescription="조직을 위해 일하고 끊임없이 발전하는 개발자"
+        cardDescription="안녕하세요. 개발자 김태수입니다."
       >
-        <IntroduceMySelf />
+        <div className="m-auto size-[250px]">
+          <Image
+            unoptimized
+            alt="상반신"
+            width={0}
+            height={0}
+            src={'/images/my-head-2.jpg'}
+            style={{
+              width: '100%',
+              height: '100%'
+            }}
+            className="rounded-full object-cover shadow-lg"
+          />
+        </div>
+        {/* <IntroduceMySelf /> */}
         <PortraitAndHistory />
       </InnerCard>
     </section>
@@ -141,7 +155,11 @@ const PortraitAndHistory = () => {
             <Github className="size-4" />
             <AlertTitle>Github (링크)</AlertTitle>
             <AlertDescription className="text-base">
-              <Link href="https://github.com/2duckchun" target="_blank">
+              <Link
+                href="https://github.com/2duckchun"
+                className="text-sm"
+                target="_blank"
+              >
                 https://github.com/2duckchun
               </Link>
             </AlertDescription>
@@ -150,8 +168,21 @@ const PortraitAndHistory = () => {
             <PanelsTopLeft className="size-4" />
             <AlertTitle>블로그 (링크)</AlertTitle>
             <AlertDescription className="text-base">
-              <Link href="https://2duckchun.tistory.com" target="_blank">
+              <Link
+                href="https://2duckchun.tistory.com"
+                target="_blank"
+                className="block py-1 text-sm text-label"
+              >
+                <span className="text-label">(구)</span>{' '}
                 https://2duckchun.tistory.com
+              </Link>
+              <Link
+                href="https://blog.2duckchun.com/"
+                target="_blank"
+                className="block text-sm"
+              >
+                <span className="text-main">(신)</span>{' '}
+                https://blog.2duckchun.com/
               </Link>
             </AlertDescription>
           </Alert>
