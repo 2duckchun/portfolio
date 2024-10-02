@@ -8,6 +8,10 @@
 
 @layer base {
   :root {
+    --text: 254 7% 35%;
+    --label: 249 6% 58%;
+    --disabled: 252 19% 89%;
+
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
