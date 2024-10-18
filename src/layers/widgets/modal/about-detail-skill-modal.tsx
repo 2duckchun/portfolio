@@ -82,54 +82,41 @@ const ContentMapper = (type: SkillSet) => {
       return (
         <ul className="list-disc pl-5 text-base text-black">
           <li>
-            Centos7에서 node 18버전이 호환되지 않아 Next 프로젝트가 배포되지
-            않은 이슈를 Docker의 도입으로 해결한 경험이 있음.
+            운영체제 node18버전 호환 이슈를 Docker의 도입으로 해결한 경험이 있음
           </li>
-          <li>이미지, 컨테이너 등 기본적인 기능을 자유롭게 이용할 수 있음.</li>
-          <li>
-            필요성이 있다면 쿠버네티스 등 도커를 활용할 수 있는 기술을 습득할
-            예정
-          </li>
+          <li>gitlab runner와 연동해 CI/CD를 구축한 경험이 있음</li>
         </ul>
       )
     case 'typescript':
       return (
         <ul className="list-disc pl-5 text-base text-black">
-          <li>대부분의 프로젝트에 타입스크립트 사용 중</li>
-          <li>
-            기본적인 타입 및 제네릭, 조건부타입, keyof, typeof 등 필요한 문법을
-            프로젝트에 맞게 도입할 수 있음
-          </li>
+          <li>모든 프로젝트에 타입스크립트 사용 중</li>
+          <li>기본적인 타입을 자유롭게 다루며 개발할 수 있음</li>
         </ul>
       )
     case 'github':
       return (
         <ul className="list-disc pl-5 text-base text-black">
-          <li>사내 프론트엔드 브랜치 및 버전 관리를 담당함.</li>
-          <li>팀의 브랜치 전략에 빠르게 적응 가능.</li>
+          <li>사내 프론트엔드 브랜치 및 버전 관리를 담당함</li>
+          <li>팀의 브랜치 전략에 빠르게 적응 가능</li>
           <li>레퍼런스를 활용해 github Actions CI/CD 구축 가능</li>
         </ul>
       )
     case 'firebase':
       return (
         <ul className="list-disc pl-5 text-base text-black">
-          <li>
-            개인 프로젝트 제작 때 firebase의 NoSQL + 실시간 데이터베이스를
-            사용해본 경험이 있음.
-          </li>
-          <li>기본적인 CRUD 구현은 자유롭게 가능</li>
-          <li>레퍼런스를 활용하여 업무에 필요한 기능을 구축할 수 있음.</li>
+          <li>레퍼런스를 활용하여 업무에 필요한 기능을 구축할 수 있음</li>
         </ul>
       )
     case 'nestjs':
       return (
         <ul className="list-disc pl-5 text-base text-black">
-          <li>간단한 OAuth, CRUD 서버를 구축할 수 있음.</li>
+          <li>간단한 OAuth, CRUD 서버를 구축할 수 있음</li>
           <li>
-            사내 백엔드 개발자가 작성한 Nestjs 코드를 함께 리뷰하며 협업한
-            경험이 있음.
+            Guard, Exception 등의 기능을 활용해 효율적으로 예외처리를 하며
+            개발할 수 있음
           </li>
-          <li>Nestjs의 파이프라인에 대해 이해하고 있음.</li>
+          <li>Swagger를 활용하여 API를 적절히 문서화할 수 있음</li>
         </ul>
       )
     case 'react':
@@ -140,37 +127,59 @@ const ContentMapper = (type: SkillSet) => {
             함수형 컴포넌트, hooks, custom hooks 등 리액트 함수형 컴포넌트를
             자유롭게 개발에 활용할 수 있음.
           </li>
-          <li>React 한글 공식문서 오픈소스 번역에 참여한 경험이 있음.</li>
+          <li>
+            React 한글 공식문서 오픈소스 번역에 참여한 경험이 있음.
+            <ul>
+              <li className="pl-2">
+                <a
+                  className="text-blue-500 underline"
+                  href="https://ko.react.dev/reference/react/useEffect"
+                  target="_blank"
+                >
+                  useEffect
+                </a>
+              </li>
+              <li className="pl-2">
+                <a
+                  className="text-blue-500 underline"
+                  href="https://ko.react.dev/reference/react/useReducer"
+                  target="_blank"
+                >
+                  useReducer
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       )
     case 'nextjs':
       return (
         <ul className="list-disc pl-5 text-base text-black">
           <li>현재 주력 개발 프레임워크.</li>
-          <li>App Router를 자유롭게 활용할 수 있음.</li>
+          <li>App Router를 주로 사용하고 있음.</li>
+          <li>SSR, Server Action 등을 자유롭게 이용할 수 있음.</li>
           <li>
-            hydrate, RSC Payload 등 리액트 서버컴포넌트의 구성요소를 이해하고
-            있으며, 이를 통해 개발 구상 단계에서 SSR, CSR를 구분지어 사고할 수
-            있음.
-          </li>
-          <li>
-            유지보수가 용이한 레이아웃 및 디렉토리 구조를 구현하기 위해
-            고민하며, 이에 대한 본인의 생각을 블로그에 포스팅하고 있음.
+            SSR과 CSR을 효과적으로 분리하는 것에 관심이 많으며, 무분별한 SSR
+            적용은 지양하고 있음.
           </li>
         </ul>
       )
     case 'html-js-css':
       return (
         <ul className="list-disc pl-5 text-base text-black">
-          <li>시맨틱 태그 등을 마크업에 자유롭게 활용할 수 있음.</li>
-          <li>
-            CSS를 구조적으로 설계하며, 디자인에 맞는 스타일을 웹에 추가할 수
-            있음.
-          </li>
-          <li>
-            배열 프로토타입 메서드 구현, 소스코드 평가 순서 등 자바스크립트의
-            동작원리를 연구하며 자바스크립트의 탄탄한 기초를 쌓았음.
-          </li>
+          <li>기본적인 퍼블리싱, CSS 작업을 무리없이 수행할 수 있음.</li>
+          <li>자바스크립트의 기초적 토대를 계속 쌓으려 노력하는 중</li>
+          <ul className="mt-1 pl-2 text-sm">
+            <li className="border-l-2 border-l-gray-600/50 py-1 pl-2">
+              배열 프로토타입 메서드(map, reduce 등)구현에 대한 연구
+            </li>
+            <li className="border-l-2 border-l-gray-600/50 py-1 pl-2">
+              에러 클래스 확장 및 에러를 효율적으로 다루는 것에 대한 연구
+            </li>
+            <li className="border-l-2 border-l-gray-600/50 py-1 pl-2">
+              그 외 mdn 문서를 보며 꾸준히 JS 기초 지식을 습득하는 중
+            </li>
+          </ul>
         </ul>
       )
     case 'tailwind':
@@ -178,7 +187,7 @@ const ContentMapper = (type: SkillSet) => {
         <ul className="list-disc pl-5 text-base text-black">
           <li>
             공식문서를 활용하여 필요한 기능들을 자유롭게 프로젝트에 추가할 수
-            있음. (theme, extends, plugin 등)
+            있음
           </li>
           <li>
             preset 기능을 활용하여 모노레포 환경에서 사내 프로젝트에 공통적으로
@@ -190,7 +199,7 @@ const ContentMapper = (type: SkillSet) => {
       return (
         <ul className="list-disc pl-5 text-base text-black">
           <li>
-            사내 프론트엔드 전역 상태 관리 툴로써 zustand를 주도적으로 도입함.
+            top-down 방식의 상태 설계를 하고자 zustand를 도입한 경험이 있음.
           </li>
           <li>공식문서를 참조하여 필요한 기능을 구현할 수 있음.</li>
         </ul>
@@ -199,8 +208,8 @@ const ContentMapper = (type: SkillSet) => {
       return (
         <ul className="list-disc pl-5 text-base text-black">
           <li>
-            사내 프론트엔드 서버 상태 관리 툴로써 React-Query를 주도적으로
-            도입함.
+            서버(DB)와 클라이언트 간 데이터를 동기화하기 위해 주도적으로 사내
+            프로젝트에 React Query를 도입해 사용함.
           </li>
           <li>
             prefetch 기능을 활용하여 SSR 환경에서 렌더링에 필요한 데이터를 미리
@@ -212,10 +221,7 @@ const ContentMapper = (type: SkillSet) => {
     case 'vue':
       return (
         <ul className="list-disc pl-5 text-base text-black">
-          <li>
-            Vue2로 개발된 회사의 레거시 프로젝트를 유지보수했던 경험이 있음.
-          </li>
-          <li>Vue3로 개발된 회사의 최신 프로젝트 개발에 기여한 경험이 있음.</li>
+          <li>Vue2 레거시 프로젝트를 유지보수한 경험이 있음.</li>
         </ul>
       )
     default:
