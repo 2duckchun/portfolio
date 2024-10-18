@@ -27,28 +27,68 @@ const AboutMeContainer: FunctionComponent<AboutMeContainerProps> = () => {
         cardTitle={<h3>About Me</h3>}
         cardDescription="안녕하세요. 개발자 김태수입니다."
       >
-        <div className="m-auto size-[250px]">
-          <Image
-            unoptimized
-            alt="상반신"
-            width={0}
-            height={0}
-            src={'/images/my-head-2.jpg'}
-            style={{
-              width: '100%',
-              height: '100%'
-            }}
-            className="rounded-full object-cover shadow-lg"
-          />
+        <div className="max-w-[85%] m-auto">
+          <p className="py-2">
+            안녕하세요. 자바스크립트 생태계에 익숙한 개발자 김태수입니다.
+          </p>
+          <p className="py-2">
+            <b>
+              1년 동안 현업에서 사내 1인 프론트엔드 개발자로 근무하며
+              프론트엔드의 셋팅부터 배포, 유지보수 등 전 과정을 모두 아우르는
+              경험을 했습니다.
+            </b>{' '}
+            이는 정말 값진 경험이었고, 앞으로도 쭉 개발자로써 성장하는 것에
+            자신감을 얻게 된 계기가 되었습니다.
+          </p>
+          <p className="py-2">
+            <b>저는 제 코드에서 프로젝트의 구조가 드러나기를 희망합니다.</b>{' '}
+            결과적으로 제 손을 거쳐간 코드들이 다른 사람에게도 쉽게 읽혀,
+            타인에게 스트레스를 주지 않는 코드를 작성하기를 원합니다. 이를 위해
+            리팩터링, 코드 아키텍쳐 등 개발 관련 도서를 틈틈이 읽고 있으며, 함께
+            개발을 하는 동료들과 주기적으로 모임을 가지며 생각을 공유하고
+            있습니다.
+          </p>
+          <p className="py-2">
+            <b>
+              기초가 중요하다는 신념 하에 컴퓨터의 본질에 대해서도 배움을
+              갈구합니다.
+            </b>{' '}
+            올해 초 한국방송통신대학교 컴퓨터과학과에 진학하여 주경야독하며
+            개발자로써 의미있는 시간을 보내고 있습니다.
+          </p>
+          <p className="py-2">
+            즉시 전력으로도 보탬이 되고, 높은 성장력으로 미래에도 도움이 되는
+            동료 개발자로써 함께하겠습니다. 감사합니다.
+          </p>
         </div>
+        <MyPhoto />
+        <History />
         {/* <IntroduceMySelf /> */}
-        <PortraitAndHistory />
       </InnerCard>
     </section>
   )
 }
 
 export { AboutMeContainer }
+
+const MyPhoto = () => {
+  return (
+    <div className="m-auto size-[250px] mt-[50px]">
+      <Image
+        unoptimized
+        alt="상반신"
+        width={0}
+        height={0}
+        src={'/images/my-head-2.jpg'}
+        style={{
+          width: '100%',
+          height: '100%'
+        }}
+        className="rounded-full object-cover shadow-lg"
+      />
+    </div>
+  )
+}
 
 const IntroduceMySelf = () => {
   return (
@@ -146,7 +186,7 @@ const IntroduceMySelf = () => {
   )
 }
 
-const PortraitAndHistory = () => {
+const History = () => {
   return (
     <div className="py-10">
       <div className="flex h-full flex-col justify-center gap-10 lg:flex-row">
