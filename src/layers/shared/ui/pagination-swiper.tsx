@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Pagination, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { cn } from '@/src/layers/shared/lib/utils'
+import { SwipeImageData } from '../../entities/project/type'
 
 interface PaginationSwiperProps extends HTMLAttributes<HTMLDivElement> {
   swipeImageData: SwipeImageData
@@ -30,6 +31,7 @@ const PaginationSwiper: FunctionComponent<PaginationSwiperProps> = ({
             <SwiperSlide key={data.imageSrc}>
               <div className="flex size-full items-center justify-center pb-10">
                 <Image
+                  className="select-none"
                   unoptimized
                   src={data.imageSrc}
                   alt={data.imageAlt}
@@ -37,7 +39,7 @@ const PaginationSwiper: FunctionComponent<PaginationSwiperProps> = ({
                   height={0}
                   style={{
                     height: 'auto',
-                    maxWidth: '200px',
+                    maxWidth: '75%',
                     width: '100%'
                   }}
                 />
