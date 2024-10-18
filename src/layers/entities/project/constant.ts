@@ -17,6 +17,48 @@ export const DPLANIT_HOMEPAGE_SWIPE_DATA = [
   }
 ]
 
+export const NOLJANG_ECOMMERCE_SWIPE_DATA = [
+  {
+    imageSrc: '/images/project/noljang-1.png',
+    imageAlt: '놀장 이커머스 메인 화면'
+  },
+  {
+    imageSrc: '/images/project/noljang-2.png',
+    imageAlt: '놀장 이커머스 장바구니'
+  },
+  {
+    imageSrc: '/images/project/noljang-3.png',
+    imageAlt: '놀장 이커머스 상품상세'
+  },
+  {
+    imageSrc: '/images/project/noljang-4.png',
+    imageAlt: '놀장 이커머스 상품구매'
+  }
+]
+
+export const NOLJANG_ADMIN_SWIPE_DATA = [
+  {
+    imageSrc: '/images/project/noljang-admin-1.png',
+    imageAlt: '놀장 어드민 메인 화면'
+  },
+  {
+    imageSrc: '/images/project/noljang-admin-2.png',
+    imageAlt: '놀장 어드민 상품 등록'
+  },
+  {
+    imageSrc: '/images/project/noljang-admin-3.png',
+    imageAlt: '놀장 어드민 대량상품 등록'
+  },
+  {
+    imageSrc: '/images/project/noljang-admin-4.png',
+    imageAlt: '놀장 어드민 도매센터'
+  },
+  {
+    imageSrc: '/images/project/noljang-admin-5.png',
+    imageAlt: '놀장 어드민 주문관리'
+  }
+]
+
 export const DPLANIT_AI_REPORT_SWIPE_DATA = [
   {
     imageSrc: '/images/project/report-1.png',
