@@ -1,6 +1,6 @@
 'use client'
 
-import { FunctionComponent, HTMLAttributes } from 'react'
+import { FunctionComponent, HTMLAttributes, ReactNode } from 'react'
 import Image from 'next/image'
 import { SkillDataList } from '../../entities'
 import { Button, Card, useSkillModalStore } from '../../shared'
@@ -13,21 +13,33 @@ const SkillSetContainer: FunctionComponent<SkillSetContainerProps> = () => {
       id="skills"
       className="h-fit w-full bg-gray-200/50 px-3 py-5 lg:p-10"
     >
-      <InnerCard cardTitle={<h3>Skills</h3>} cardDescription="">
-        <div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
+      <InnerCard
+        cardTitle={<h3>Skills</h3>}
+        cardDescription="자바스크립트 생태계를 두루 다룰 수 있습니다."
+      >
+        <SkillSetGridContainer>
           {SkillDataList.map((el) => {
             return (
               <SkillSetImageCard
                 type={el.skillKey}
-                key={el.imageAlt}
+                key={el.skillKey}
                 imageSrc={el.imageSrc}
                 imageAlt={el.imageAlt}
               />
             )
           })}
-        </div>
+        </SkillSetGridContainer>
       </InnerCard>
     </section>
+  )
+}
+
+// Tailwind 스타일이 너무 길어져 별도 컴포넌트로 분리함.
+const SkillSetGridContainer = ({ children }: { children: ReactNode }) => {
+  return (
+    <div className="grid grid-cols-2 gap-3 rounded  p-5 shadow-md lg:grid-cols-5">
+      {children}
+    </div>
   )
 }
 
