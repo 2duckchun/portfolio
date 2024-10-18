@@ -82,3 +82,37 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .note {
+    @apply text-base leading-8 border-2;
+    border-color: black;
+    background: -webkit-linear-gradient(
+      top,
+      var(--border-color) 0%,
+      var(--border-color) 1px,
+      var(--bg-transparent) 1px,
+      var(--bg-transparent) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      var(--border-color) 0%,
+      var(--border-color) 1px,
+      var(--bg-transparent) 1px,
+      var(--bg-transparent) 100%
+    );
+    background-size: 100% 32px;
+  }
+
+  .note > p {
+    @apply m-0 px-1 border-b-2;
+  }
+
+  li {
+    @apply py-[2px];
+  }
+
+  p {
+    @apply leading-relaxed py-[2px];
+  }
+}
