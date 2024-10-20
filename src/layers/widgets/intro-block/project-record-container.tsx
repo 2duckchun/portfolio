@@ -131,7 +131,7 @@ const mainImplementation = {
       </li>
       <ul className="list-outside list-disc pl-4 marker:text-slate-600">
         <li>
-          사용자 편의를 위한 기능 기획 및 구현
+          <b>사용자 편의를 위한 기능 기획 및 구현</b>
           <ul className="list-item list-outside pl-2 marker:text-slate-600">
             <li className="border-l-2 pl-2">
               상품 등록 시 엑셀 업로드 기능 및 공통 양식 다운로드 기능
@@ -183,8 +183,8 @@ const mainImplementation = {
           계정 보안 취약점 발견 후 사후처리
           <ul className="list-item list-outside pl-2 marker:text-slate-600">
             <li className="border-l-2 pl-2">
-              계정 생성 시 클라이언트에서 solt-key도 없이 비밀번호를 암호화하여
-              서버에 전송하는 로직을 발견하여 서버에서 처리할 수 있도록 협조
+              계정 생성 시 프론트엔드에서 위험한 형태로 패스워드를 암호화하여
+              서버에 전송하는 로직을 발견하여, 서버에서 처리할 수 있도록 협조
               요청 후 수정
             </li>
           </ul>
@@ -198,7 +198,7 @@ const mainImplementation = {
               모든 부분에 에러가 나는 것을 디버깅함
             </li>
             <li className="border-l-2 pl-2">
-              모달창 메세지를 통해 사용자와 최소한의 의사소통 구현
+              모달 메세지를 통해 사용자와 최소한의 의사소통 구현
             </li>
           </ul>
         </li>
